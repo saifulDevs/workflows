@@ -1,10 +1,13 @@
 # ========================================
 # Dependencies Stage: Install Dependencies
 # ========================================
-FROM oven/bun:alpine AS deps
+FROM oven/bun:slim AS deps
 WORKDIR /app
 
-# Copy only package files needed for migrations
+# Update apt and install any required packages if needed
+RUN apt-get update && apt-get install -y libc6 && rm -rf /var/lib/apt/lists/*
+
+# Copy package files needed for dependency installation
 COPY package.json bun.lock turbo.json ./
 COPY apps/workflow/package.json ./apps/workflow/db/
 
@@ -15,11 +18,13 @@ RUN bun install --omit dev --ignore-scripts && \
 # ========================================
 # Runner Stage: Production Environment
 # ========================================
-FROM oven/bun:alpine AS runner
+FROM oven/bun:slim AS runner
 WORKDIR /app
 
-# Copy only the necessary files from deps
+# Copy node_modules from deps stage
 COPY --from=deps /app/node_modules ./node_modules
+
+# Copy necessary app files
 COPY apps/workflow/drizzle.config.ts ./apps/workflow/drizzle.config.ts
 COPY apps/workflow/db ./apps/workflow/db
 COPY apps/workflow/package.json ./apps/workflow/package.json

@@ -1,14 +1,17 @@
 # ========================================
-# Base Stage: Alpine Linux with Bun
+# Base Stage: Slim Linux with Bun (Debian-based)
 # ========================================
-FROM oven/bun:alpine AS base
+FROM oven/bun:slim AS base
+
+# Update and install libc6-compat if needed (usually pre-installed in Debian slim)
+RUN apt-get update && apt-get install -y libc6 && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
 
 # ========================================
 # Dependencies Stage: Install Dependencies
 # ========================================
 FROM base AS deps
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
 
 # Install turbo globally
 RUN bun install -g turbo
@@ -23,18 +26,17 @@ RUN bun install --omit dev --ignore-scripts
 # Builder Stage: Build the Application
 # ========================================
 FROM base AS builder
-WORKDIR /app
 
-# Install turbo globally in builder stage
+# Install turbo globally
 RUN bun install -g turbo
+
+WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Installing with full context to prevent missing dependencies error
 RUN bun install --omit dev --ignore-scripts
 
-# Required for standalone nextjs build
 WORKDIR /app/apps/workflow
 RUN bun install sharp
 
@@ -48,8 +50,8 @@ RUN bun run build
 # ========================================
 # Runner Stage: Run the actual app
 # ========================================
-
 FROM base AS runner
+
 WORKDIR /app
 
 ENV NODE_ENV=production

@@ -1,6 +1,6 @@
 services:
   workflows:
-    image: ghcr.io/saifulDevs/workflows:latest
+    image: ghcr.io/saifuldevs/workflows:latest
     restart: unless-stopped
     ports:
       - '3000:3000'
@@ -38,7 +38,7 @@ services:
       start_period: 10s
 
   realtime:
-    image: ghcr.io/saifulDevs/realtime:latest
+    image: ghcr.io/saifuldevs/realtime:latest
     restart: unless-stopped
     ports:
       - '3002:3002'
@@ -62,7 +62,7 @@ services:
       start_period: 10s
 
   migrations:
-    image: ghcr.io/saifulDevs/migrations:latest
+    image: ghcr.io/saifuldevs/migrations:latest
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@db:5432/${POSTGRES_DB:-workflows}
     depends_on:

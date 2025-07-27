@@ -64,7 +64,7 @@ export const getCommentsTool: ToolConfig<RedditCommentsParams, RedditCommentsRes
 
       return {
         Authorization: `Bearer ${params.accessToken}`,
-        'User-Agent': 'workflow-studio/1.0 (https://github.com/saifulDevs/workflow)',
+        'User-Agent': 'workflow-studio/1.0 (https://github.com/saifuldevs/workflow)',
         Accept: 'application/json',
       }
     },

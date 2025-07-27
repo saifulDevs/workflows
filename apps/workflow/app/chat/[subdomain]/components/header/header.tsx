@@ -33,7 +33,7 @@ export function ChatHeader({ chatConfig, starCount }: ChatHeaderProps) {
       </div>
       <div className='flex items-center gap-2'>
         <a
-          href='https://github.com/saifulDevs/workflow'
+          href='https://github.com/saifuldevs/workflow'
           className='flex items-center gap-1 text-foreground'
           aria-label='GitHub'
           target='_blank'

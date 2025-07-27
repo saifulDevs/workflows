@@ -226,7 +226,7 @@ export default function ContributorsPage() {
                     size='sm'
                     className='gap-1 border-[#606060]/30 bg-[#0f0f0f] text-neutral-300 text-xs backdrop-blur-sm hover:bg-neutral-700/50 hover:text-white sm:gap-2 sm:text-sm'
                   >
-                    <a href='https://github.com/saifulDevs/workflow' target='_blank' rel='noopener'>
+                    <a href='https://github.com/saifuldevs/workflow' target='_blank' rel='noopener'>
                       <Github className='h-3 w-3 sm:h-4 sm:w-4' />
                       <span className='hidden sm:inline'>View on GitHub</span>
                       <span className='sm:hidden'>GitHub</span>
@@ -553,7 +553,7 @@ export default function ContributorsPage() {
                       className='bg-[#701ffc] text-white transition-colors duration-500 hover:bg-[#802FFF]'
                     >
                       <a
-                        href='https://github.com/saifulDevs/workflow/blob/main/.github/CONTRIBUTING.md'
+                        href='https://github.com/saifuldevs/workflow/blob/main/.github/CONTRIBUTING.md'
                         target='_blank'
                         rel='noopener'
                       >
@@ -568,7 +568,7 @@ export default function ContributorsPage() {
                       size='lg'
                       className='border-[#606060]/30 bg-transparent text-neutral-300 transition-colors duration-500 hover:bg-neutral-700/50 hover:text-white'
                     >
-                      <a href='https://github.com/saifulDevs/workflow' target='_blank' rel='noopener'>
+                      <a href='https://github.com/saifuldevs/workflow' target='_blank' rel='noopener'>
                         <Github className='mr-2 h-4 w-4 sm:h-5 sm:w-5' />
                         View Repository
                       </a>
@@ -581,7 +581,7 @@ export default function ContributorsPage() {
                       className='border-[#606060]/30 bg-transparent text-neutral-300 transition-colors duration-500 hover:bg-neutral-700/50 hover:text-white'
                     >
                       <a
-                        href='https://github.com/saifulDevs/workflow/issues'
+                        href='https://github.com/saifuldevs/workflow/issues'
                         target='_blank'
                         rel='noopener'
                       >

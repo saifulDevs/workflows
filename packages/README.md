@@ -245,5 +245,5 @@ Both SDKs are licensed under the Apache-2.0 License. See the [LICENSE](../LICENS
 
 - 📖 [Documentation](https://docs.workflows.ai)
 - 💬 [Discord Community](https://discord.gg/workflows)
-- 🐛 [Issue Tracker](https://github.com/saifulDevs/workflow/issues)
+- 🐛 [Issue Tracker](https://github.com/saifuldevs/workflow/issues)
 - 📧 [Email Support](mailto:support@workflows.ai) 

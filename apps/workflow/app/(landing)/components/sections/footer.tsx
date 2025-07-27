@@ -71,7 +71,7 @@ function Footer() {
               {/* See repo button positioned absolutely to align with the top text - desktop only */}
               <div className='absolute top-0 right-0 hidden md:block'>
                 <Link
-                  href='https://github.com/saifulDevs/workflow'
+                  href='https://github.com/saifuldevs/workflow'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -129,7 +129,7 @@ function Footer() {
               <div className='mt-4 flex items-center md:mt-0 md:justify-end'>
                 <div className='flex gap-4'>
                   <Link
-                    href={'https://github.com/saifulDevs/workflow'}
+                    href={'https://github.com/saifuldevs/workflow'}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex text-2xl transition-all duration-500 md:hidden'
@@ -159,7 +159,7 @@ function Footer() {
                     <DiscordIcon className='h-9 w-9 fill-[#9E91AA] hover:fill-[#bdaecb] md:h-10 md:w-10' />
                   </Link>
                   <Link
-                    href={'https://x.com/saifulDevs'}
+                    href={'https://x.com/saifuldevs'}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-2xl transition-all duration-500'
@@ -243,7 +243,7 @@ function Footer() {
               transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
             >
               <Link
-                href='https://github.com/saifulDevs/workflow'
+                href='https://github.com/saifuldevs/workflow'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -319,7 +319,7 @@ function Footer() {
             >
               <div className='flex gap-4'>
                 <Link
-                  href={'https://github.com/saifulDevs/workflow'}
+                  href={'https://github.com/saifuldevs/workflow'}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='flex text-2xl transition-all duration-500 md:hidden'
@@ -349,7 +349,7 @@ function Footer() {
                   <DiscordIcon className='h-9 w-9 fill-[#9E91AA] hover:fill-[#bdaecb] md:h-10 md:w-10' />
                 </Link>
                 <Link
-                  href={'https://x.com/saifulDevs'}
+                  href={'https://x.com/saifuldevs'}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-2xl transition-all duration-500'

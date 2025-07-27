@@ -11,7 +11,7 @@ setup(
     description="workflow Studio SDK - Execute workflows programmatically",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/saifulDevs/workflow",
+    url="https://github.com/saifuldevs/workflow",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -44,8 +44,8 @@ setup(
     },
     keywords=["workflows", "ai", "workflow", "sdk", "api", "automation"],
     project_urls={
-        "Bug Reports": "https://github.com/saifulDevs/workflow/issues",
-        "Source": "https://github.com/saifulDevs/workflow",
+        "Bug Reports": "https://github.com/saifuldevs/workflow/issues",
+        "Source": "https://github.com/saifuldevs/workflow",
         "Documentation": "https://docs.workflows.ai",
     },
 ) 

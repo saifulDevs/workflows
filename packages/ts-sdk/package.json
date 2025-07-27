@@ -51,11 +51,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/workflowsai/workflow.git",
+    "url": "https://github.com/saifulDevs/workflow.git",
     "directory": "packages/ts-sdk"
   },
   "homepage": "https://workflows.ai",
   "bugs": {
-    "url": "https://github.com/workflowsai/workflow/issues"
+    "url": "https://github.com/saifulDevs/workflow/issues"
   }
 }

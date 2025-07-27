@@ -47,8 +47,8 @@ dev = [
 [project.urls]
 Homepage = "https://workflows.ai"
 Documentation = "https://docs.workflows.ai"
-Repository = "https://github.com/workflowsai/workflow"
-"Bug Reports" = "https://github.com/workflowsai/workflow/issues"
+Repository = "https://github.com/saifulDevs/workflow"
+"Bug Reports" = "https://github.com/saifulDevs/workflow/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

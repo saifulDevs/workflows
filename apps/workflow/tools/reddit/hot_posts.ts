@@ -56,7 +56,7 @@ export const hotPostsTool: ToolConfig<HotPostsParams, RedditHotPostsResponse> = 
 
       return {
         Authorization: `Bearer ${params.accessToken}`,
-        'User-Agent': 'workflow-studio/1.0 (https://github.com/workflowsai/workflow)',
+        'User-Agent': 'workflow-studio/1.0 (https://github.com/saifulDevs/workflow)',
         Accept: 'application/json',
       }
     },

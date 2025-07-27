@@ -22,7 +22,7 @@ export async function getFormattedGitHubStars(): Promise<string> {
   try {
     const token = env.GITHUB_TOKEN
 
-    const response = await fetch('https://api.github.com/repos/workflowsai/workflow', {
+    const response = await fetch('https://api.github.com/repos/saifulDevs/workflow', {
       headers: {
         Accept: 'application/vnd.github+json',
         'X-GitHub-Api-Version': '2022-11-28',
@@ -87,13 +87,13 @@ export async function getRepositoryStats(): Promise<RepoStats> {
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
     }
 
-    const repoResponse = await fetch('https://api.github.com/repos/workflowsai/workflow', {
+    const repoResponse = await fetch('https://api.github.com/repos/saifulDevs/workflow', {
       headers,
       next: { revalidate: 3600 },
     })
 
     const prsResponse = await fetch(
-      'https://api.github.com/repos/workflowsai/workflow/pulls?state=open',
+      'https://api.github.com/repos/saifulDevs/workflow/pulls?state=open',
       {
         headers,
         next: { revalidate: 3600 },
@@ -148,7 +148,7 @@ export async function getContributors(): Promise<Contributor[]> {
     }
 
     const response = await fetch(
-      'https://api.github.com/repos/workflowsai/workflow/contributors?per_page=100',
+      'https://api.github.com/repos/saifulDevs/workflow/contributors?per_page=100',
       {
         headers,
         next: { revalidate: 3600 },
@@ -183,7 +183,7 @@ export async function getCommitsData(): Promise<CommitData[]> {
     }
 
     const response = await fetch(
-      'https://api.github.com/repos/workflowsai/workflow/commits?per_page=100',
+      'https://api.github.com/repos/saifulDevs/workflow/commits?per_page=100',
       {
         headers,
         next: { revalidate: 3600 },

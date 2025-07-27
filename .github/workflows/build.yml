@@ -13,33 +13,33 @@ jobs:
         include:
           # AMD64 builds on x86 runners
           - dockerfile: ./docker/app.Dockerfile
-            image: ghcr.io/workflowsai/workflows
+            image: ghcr.io/saifulDevs/workflows
             platform: linux/amd64
             arch: amd64
             runner: linux-x64-8-core
           - dockerfile: ./docker/db.Dockerfile
-            image: ghcr.io/workflowsai/migrations
+            image: ghcr.io/saifulDevs/migrations
             platform: linux/amd64
             arch: amd64
             runner: linux-x64-8-core
           - dockerfile: ./docker/realtime.Dockerfile
-            image: ghcr.io/workflowsai/realtime
+            image: ghcr.io/saifulDevs/realtime
             platform: linux/amd64
             arch: amd64
             runner: linux-x64-8-core
           # ARM64 builds on native ARM64 runners
           - dockerfile: ./docker/app.Dockerfile
-            image: ghcr.io/workflowsai/workflows
+            image: ghcr.io/saifulDevs/workflows
             platform: linux/arm64
             arch: arm64
             runner: linux-arm64-8-core
           - dockerfile: ./docker/db.Dockerfile
-            image: ghcr.io/workflowsai/migrations
+            image: ghcr.io/saifulDevs/migrations
             platform: linux/arm64
             arch: arm64
             runner: linux-arm64-8-core
           - dockerfile: ./docker/realtime.Dockerfile
-            image: ghcr.io/workflowsai/realtime
+            image: ghcr.io/saifulDevs/realtime
             platform: linux/arm64
             arch: arm64
             runner: linux-arm64-8-core
@@ -97,9 +97,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - image: ghcr.io/workflowsai/workflows
-          - image: ghcr.io/workflowsai/migrations
-          - image: ghcr.io/workflowsai/realtime
+          - image: ghcr.io/saifulDevs/workflows
+          - image: ghcr.io/saifulDevs/migrations
+          - image: ghcr.io/saifulDevs/realtime
     permissions:
       contents: read
       packages: write

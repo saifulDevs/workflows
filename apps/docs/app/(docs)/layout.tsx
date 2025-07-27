@@ -7,7 +7,7 @@ import { source } from '@/lib/source'
 const GitHubLink = () => (
   <div className='fixed right-4 bottom-4 z-50'>
     <Link
-      href='https://github.com/workflowsai/workflow'
+      href='https://github.com/saifulDevs/workflow'
       target='_blank'
       rel='noopener noreferrer'
       className='flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background transition-colors hover:bg-muted'

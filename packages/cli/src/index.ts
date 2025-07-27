@@ -101,9 +101,9 @@ async function main() {
 
   // Pull latest images if not skipped
   if (options.pull) {
-    await pullImage('ghcr.io/workflowsai/workflows:latest')
-    await pullImage('ghcr.io/workflowsai/migrations:latest')
-    await pullImage('ghcr.io/workflowsai/realtime:latest')
+    await pullImage('ghcr.io/saifulDevs/workflows:latest')
+    await pullImage('ghcr.io/saifulDevs/migrations:latest')
+    await pullImage('ghcr.io/saifulDevs/realtime:latest')
     await pullImage('pgvector/pgvector:pg17')
   }
 
@@ -185,7 +185,7 @@ async function main() {
     NETWORK_NAME,
     '-e',
     `DATABASE_URL=postgresql://postgres:postgres@${DB_CONTAINER}:5432/workflows`,
-    'ghcr.io/workflowsai/migrations:latest',
+    'ghcr.io/saifulDevs/migrations:latest',
     'bun',
     'run',
     'db:migrate',
@@ -216,7 +216,7 @@ async function main() {
     `NEXT_PUBLIC_APP_URL=http://localhost:${port}`,
     '-e',
     'BETTER_AUTH_SECRET=your_auth_secret_here',
-    'ghcr.io/workflowsai/realtime:latest',
+    'ghcr.io/saifulDevs/realtime:latest',
   ])
 
   if (!realtimeSuccess) {
@@ -246,7 +246,7 @@ async function main() {
     'BETTER_AUTH_SECRET=your_auth_secret_here',
     '-e',
     'ENCRYPTION_KEY=your_encryption_key_here',
-    'ghcr.io/workflowsai/workflows:latest',
+    'ghcr.io/saifulDevs/workflows:latest',
   ])
 
   if (!appSuccess) {

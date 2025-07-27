@@ -24,7 +24,7 @@ export const EmailFooter = ({
               <table cellPadding={0} cellSpacing={0} style={{ border: 0 }}>
                 <tr>
                   <td align='center' style={{ padding: '0 8px' }}>
-                    <Link href='https://x.com/workflowsai' rel='noopener noreferrer'>
+                    <Link href='https://x.com/saifulDevs' rel='noopener noreferrer'>
                       <Img src={`${baseUrl}/static/x-icon.png`} width='24' height='24' alt='X' />
                     </Link>
                   </td>
@@ -39,7 +39,7 @@ export const EmailFooter = ({
                     </Link>
                   </td>
                   <td align='center' style={{ padding: '0 8px' }}>
-                    <Link href='https://github.com/workflowsai/workflow' rel='noopener noreferrer'>
+                    <Link href='https://github.com/saifulDevs/workflow' rel='noopener noreferrer'>
                       <Img
                         src={`${baseUrl}/static/github-icon.png`}
                         width='24'

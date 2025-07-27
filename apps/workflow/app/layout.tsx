@@ -118,8 +118,8 @@ export const metadata: Metadata = {
     description:
       'Build and deploy AI agents using our Figma-like canvas. Build, write evals, and deploy AI agent workflows that automate workflows and streamline your business processes.',
     images: ['https://workflows.ai/social/twitter.png'],
-    creator: '@workflowsai',
-    site: '@workflowsai',
+    creator: '@saifulDevs',
+    site: '@saifulDevs',
   },
   manifest: '/favicon/site.webmanifest',
   icons: {

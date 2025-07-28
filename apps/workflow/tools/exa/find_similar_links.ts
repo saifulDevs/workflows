@@ -1,4 +1,7 @@
-import type { ExaFindworkflowilarLinksParams, ExaFindworkflowilarLinksResponse } from '@/tools/exa/types'
+import type {
+  ExaFindworkflowilarLinksParams,
+  ExaFindworkflowilarLinksResponse,
+} from '@/tools/exa/types'
 import type { ToolConfig } from '@/tools/types'
 
 export const findworkflowilarLinksTool: ToolConfig<
@@ -86,6 +89,8 @@ export const findworkflowilarLinksTool: ToolConfig<
   },
 
   transformError: (error) => {
-    return error instanceof Error ? error.message : 'An error occurred while finding workflowilar links'
+    return error instanceof Error
+      ? error.message
+      : 'An error occurred while finding workflowilar links'
   },
 }

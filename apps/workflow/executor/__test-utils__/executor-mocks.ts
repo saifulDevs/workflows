@@ -392,8 +392,16 @@ export const createWorkflowWithParallel = (distribution?: any): SerializedWorkfl
   ],
   connections: [
     { source: 'starter', target: 'parallel-1' },
-    { source: 'parallel-1', target: 'function-1', sourceHandle: 'parallel-start-source' },
-    { source: 'parallel-1', target: 'endpoint', sourceHandle: 'parallel-end-source' },
+    {
+      source: 'parallel-1',
+      target: 'function-1',
+      sourceHandle: 'parallel-start-source',
+    },
+    {
+      source: 'parallel-1',
+      target: 'endpoint',
+      sourceHandle: 'parallel-end-source',
+    },
   ],
   loops: {},
   parallels: {
@@ -490,11 +498,11 @@ export const createMockContext = (options: MockContextOptions = {}) => {
  * Mock implementations for testing loops
  */
 export const createLoopManagerMock = (options?: {
-  processLoopIterationworkflowpl?: (context: any) => Promise<boolean>
+  processLoopIterationsImpl?: (context: any) => Promise<boolean>
   getLoopIndexImpl?: (loopId: string, blockId: string, context: any) => number
 }) => ({
   LoopManager: vi.fn().mockImplementation(() => ({
-    processLoopIterations: options?.processLoopIterationworkflowpl || vi.fn().mockResolvedValue(false),
+    processLoopIterations: options?.processLoopIterationsImpl || vi.fn().mockResolvedValue(false),
     getLoopIndex:
       options?.getLoopIndexImpl ||
       vi.fn().mockImplementation((loopId, blockId, context) => {
@@ -812,8 +820,16 @@ export const createWorkflowWithParallelArray = (
   ],
   connections: [
     { source: 'starter', target: 'parallel-1' },
-    { source: 'parallel-1', target: 'function-1', sourceHandle: 'parallel-start-source' },
-    { source: 'parallel-1', target: 'endpoint', sourceHandle: 'parallel-end-source' },
+    {
+      source: 'parallel-1',
+      target: 'function-1',
+      sourceHandle: 'parallel-start-source',
+    },
+    {
+      source: 'parallel-1',
+      target: 'endpoint',
+      sourceHandle: 'parallel-end-source',
+    },
   ],
   loops: {},
   parallels: {
@@ -829,7 +845,11 @@ export const createWorkflowWithParallelArray = (
  * Create a workflow with parallel blocks for object distribution
  */
 export const createWorkflowWithParallelObject = (
-  items: Record<string, any> = { first: 'alpha', second: 'beta', third: 'gamma' }
+  items: Record<string, any> = {
+    first: 'alpha',
+    second: 'beta',
+    third: 'gamma',
+  }
 ): SerializedWorkflow => ({
   version: '2.0',
   blocks: [
@@ -877,8 +897,16 @@ export const createWorkflowWithParallelObject = (
   ],
   connections: [
     { source: 'starter', target: 'parallel-1' },
-    { source: 'parallel-1', target: 'function-1', sourceHandle: 'parallel-start-source' },
-    { source: 'parallel-1', target: 'endpoint', sourceHandle: 'parallel-end-source' },
+    {
+      source: 'parallel-1',
+      target: 'function-1',
+      sourceHandle: 'parallel-start-source',
+    },
+    {
+      source: 'parallel-1',
+      target: 'endpoint',
+      sourceHandle: 'parallel-end-source',
+    },
   ],
   loops: {},
   parallels: {

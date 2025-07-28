@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { highlight, languages } from 'prismjs'
-import Editor from 'react-workflowple-code-editor'
+import Editor from 'react-simple-code-editor'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'

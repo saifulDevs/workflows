@@ -85,7 +85,9 @@ export const confluenceUpdateTool: ToolConfig<ConfluenceUpdateParams, Confluence
           : undefined,
         version: {
           number: params.version || 1,
-          message: params.version ? 'Updated via workflow Studio' : 'Initial update via workflow Studio',
+          message: params.version
+            ? 'Updated via workflow Studio'
+            : 'Initial update via workflow Studio',
         },
       }
       return body

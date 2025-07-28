@@ -829,7 +829,9 @@ async function getToolInfo(toolName: string): Promise<{
       .split('_')
       .map((part, i) => (i === 0 ? part : part.charAt(0).toUpperCase() + part.slice(1)))
       .join('')
-    possibleLocations.push(path.join(rootDir, `apps/workflow/tools/${toolPrefix}/${camelCaseSuffix}.ts`))
+    possibleLocations.push(
+      path.join(rootDir, `apps/workflow/tools/${toolPrefix}/${camelCaseSuffix}.ts`)
+    )
 
     // Also check the index.ts file in the tool directory
     possibleLocations.push(path.join(rootDir, `apps/workflow/tools/${toolPrefix}/index.ts`))

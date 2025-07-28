@@ -45,7 +45,7 @@ ENV NEXT_TELEMETRY_DISABLED=1 \
     DOCKER_BUILD=1
 
 WORKDIR /app
-RUN bun run build
+RUN bun run build --concurrency=1
 
 # ========================================
 # Runner Stage: Run the actual app

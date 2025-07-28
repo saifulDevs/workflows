@@ -6,7 +6,7 @@ import { highlight, languages } from 'prismjs'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/themes/prism.css'
 
-import Editor from 'react-workflowple-code-editor'
+import Editor from 'react-simple-code-editor'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,

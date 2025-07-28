@@ -5,7 +5,7 @@ import { highlight, languages } from 'prismjs'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/themes/prism.css'
 
-import Editor from 'react-workflowple-code-editor'
+import Editor from 'react-simple-code-editor'
 import { Button } from '@/components/ui/button'
 import { checkEnvVarTrigger, EnvVarDropdown } from '@/components/ui/env-var-dropdown'
 import { checkTagTrigger, TagDropdown } from '@/components/ui/tag-dropdown'
@@ -150,7 +150,10 @@ export function Code({
     debounceMs: 150,
     isStreaming: isAiStreaming, // Use AI streaming state directly
     onStreamingEnd: () => {
-      logger.debug('AI streaming ended, value persisted', { blockId, subBlockId })
+      logger.debug('AI streaming ended, value persisted', {
+        blockId,
+        subBlockId,
+      })
     },
   })
 

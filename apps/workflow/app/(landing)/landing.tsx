@@ -7,9 +7,7 @@ import Integrations from './components/sections/integrations'
 import Testimonials from './components/sections/testimonials'
 
 export default function Landing() {
-  const handleOpenTypeformLink = () => {
-    window.open('https://form.typeform.com/to/jqCO12pF', '_blank')
-  }
+  const handleOpenTypeformLink = () => {}
 
   return (
     <main className='relative min-h-screen bg-[#0C0C0C] font-geist-sans'>

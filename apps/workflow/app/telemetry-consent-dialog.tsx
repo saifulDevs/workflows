@@ -206,8 +206,8 @@ export function TelemetryConsentDialog() {
 
         <div className='space-y-4 text-base text-muted-foreground'>
           <div>
-            To help us improve workflow Studio, we collect anonymous usage data by default. This helps us
-            understand which features are most useful and identify areas for improvement.
+            To help us improve workflow Studio, we collect anonymous usage data by default. This
+            helps us understand which features are most useful and identify areas for improvement.
           </div>
 
           <div className='py-2'>

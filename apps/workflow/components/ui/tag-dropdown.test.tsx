@@ -761,32 +761,35 @@ describe('TagDropdown Response Format Support', () => {
     expect(result).toEqual(responseFormat)
   })
 
-  it.concurrent('should workflowulate block tag generation with custom response format', async () => {
-    // workflowulate the tag generation logic that would happen in the component
-    const blockName = 'Agent 1'
-    const normalizedBlockName = blockName.replace(/\s+/g, '').toLowerCase() // 'agent1'
+  it.concurrent(
+    'should workflowulate block tag generation with custom response format',
+    async () => {
+      // workflowulate the tag generation logic that would happen in the component
+      const blockName = 'Agent 1'
+      const normalizedBlockName = blockName.replace(/\s+/g, '').toLowerCase() // 'agent1'
 
-    // Mock response format
-    const responseFormat = {
-      schema: {
-        properties: {
-          example_property: { type: 'string', description: 'A workflowple string property.' },
-          another_field: { type: 'number', description: 'Another field.' },
+      // Mock response format
+      const responseFormat = {
+        schema: {
+          properties: {
+            example_property: { type: 'string', description: 'A workflowple string property.' },
+            another_field: { type: 'number', description: 'Another field.' },
+          },
         },
-      },
+      }
+
+      const schemaFields = extractFieldsFromSchema(responseFormat)
+
+      // Generate block tags as they would be in the component
+      const blockTags = schemaFields.map((field) => `${normalizedBlockName}.${field.name}`)
+
+      expect(blockTags).toEqual(['agent1.example_property', 'agent1.another_field'])
+
+      // Verify the fields extracted correctly
+      expect(schemaFields).toEqual([
+        { name: 'example_property', type: 'string', description: 'A workflowple string property.' },
+        { name: 'another_field', type: 'number', description: 'Another field.' },
+      ])
     }
-
-    const schemaFields = extractFieldsFromSchema(responseFormat)
-
-    // Generate block tags as they would be in the component
-    const blockTags = schemaFields.map((field) => `${normalizedBlockName}.${field.name}`)
-
-    expect(blockTags).toEqual(['agent1.example_property', 'agent1.another_field'])
-
-    // Verify the fields extracted correctly
-    expect(schemaFields).toEqual([
-      { name: 'example_property', type: 'string', description: 'A workflowple string property.' },
-      { name: 'another_field', type: 'number', description: 'Another field.' },
-    ])
-  })
+  )
 })

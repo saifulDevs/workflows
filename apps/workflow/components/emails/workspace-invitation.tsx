@@ -78,11 +78,12 @@ export const WorkspaceInvitationEmail = ({
           <Section style={baseStyles.content}>
             <Text style={baseStyles.paragraph}>Hello,</Text>
             <Text style={baseStyles.paragraph}>
-              {inviterName} has invited you to join the "{workspaceName}" workspace on workflow Studio!
+              {inviterName} has invited you to join the "{workspaceName}" workspace on workflow
+              Studio!
             </Text>
             <Text style={baseStyles.paragraph}>
-              workflow Studio is a powerful platform for building, testing, and optimizing AI workflows.
-              Join this workspace to collaborate with your team.
+              workflow Studio is a powerful platform for building, testing, and optimizing AI
+              workflows. Join this workspace to collaborate with your team.
             </Text>
             <Link href={enhancedLink} style={{ textDecoration: 'none' }}>
               <Text style={baseStyles.button}>Accept Invitation</Text>

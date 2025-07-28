@@ -5,7 +5,7 @@ import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-json'
 import 'prismjs/themes/prism.css'
 
-import Editor from 'react-workflowple-code-editor'
+import Editor from 'react-simple-code-editor'
 import { cn } from '@/lib/utils'
 
 interface CodeEditorProps {
@@ -184,7 +184,11 @@ export function CodeEditor({
         {code.length === 0 && placeholder && (
           <pre
             className='pointer-events-none absolute top-[12px] select-none overflow-visible whitespace-pre-wrap text-muted-foreground/50'
-            style={{ left: `calc(${gutterWidth} + 12px)`, fontFamily: 'inherit', margin: 0 }}
+            style={{
+              left: `calc(${gutterWidth} + 12px)`,
+              fontFamily: 'inherit',
+              margin: 0,
+            }}
           >
             {placeholder}
           </pre>

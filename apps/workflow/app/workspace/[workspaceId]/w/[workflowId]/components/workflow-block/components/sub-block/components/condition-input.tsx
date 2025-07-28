@@ -5,7 +5,7 @@ import { highlight, languages } from 'prismjs'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/themes/prism.css'
 
-import Editor from 'react-workflowple-code-editor'
+import Editor from 'react-simple-code-editor'
 import { Handle, Position, useUpdateNodeInternals } from 'reactflow'
 import { Button } from '@/components/ui/button'
 import { checkEnvVarTrigger, EnvVarDropdown } from '@/components/ui/env-var-dropdown'

@@ -1,5 +1,5 @@
 import { answerTool } from '@/tools/exa/answer'
-import { findworkflowilarLinksTool } from '@/tools/exa/find_workflowilar_links'
+import { findworkflowilarLinksTool } from '@/tools/exa/find_similar_links'
 import { getContentsTool } from '@/tools/exa/get_contents'
 import { researchTool } from '@/tools/exa/research'
 import { searchTool } from '@/tools/exa/search'

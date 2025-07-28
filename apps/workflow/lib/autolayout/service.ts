@@ -399,7 +399,9 @@ export class AutoLayoutService {
   /**
    * Get default layout options optimized for different scenarios
    */
-  getDefaultOptions(scenario: 'workflowple' | 'complex' | 'presentation' = 'workflowple'): LayoutOptions {
+  getDefaultOptions(
+    scenario: 'workflowple' | 'complex' | 'presentation' = 'workflowple'
+  ): LayoutOptions {
     const baseOptions: LayoutOptions = {
       strategy: 'smart',
       direction: 'auto',

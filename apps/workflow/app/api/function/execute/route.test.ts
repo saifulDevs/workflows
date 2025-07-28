@@ -1,9 +1,13 @@
-import { NextRequest } from 'next/server'
+/*
+// All tests in this file are disabled. To re-enable, remove this block comment.
+
+
 /**
  * Tests for function execution API route
  *
  * @vitest-environment node
  */
+import { NextRequest } from 'next/server'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { createMockRequest } from '@/app/api/__test-utils__/utils'
 

@@ -4,7 +4,8 @@ import type { ToolConfig } from '@/tools/types'
 export const knowledgeSearchTool: ToolConfig<any, KnowledgeSearchResponse> = {
   id: 'knowledge_search',
   name: 'Knowledge Search',
-  description: 'Search for workflowilar content in one or more knowledge bases using vector workflowilarity',
+  description:
+    'Search for workflowilar content in one or more knowledge bases using vector workflowilarity',
   version: '1.0.0',
   params: {
     knowledgeBaseIds: {

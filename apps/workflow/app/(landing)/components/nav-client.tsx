@@ -79,9 +79,9 @@ const NavLinks = ({
   const navigationLinks = [
     // { href: "/", label: "Marketplace" },
     ...(currentPath !== '/' ? [{ href: '/', label: 'Home' }] : []),
-    { href: 'https://docs.workflows.ai/', label: 'Docs', external: true },
+    { href: '/', label: 'Docs', external: true },
     // { href: '/', label: 'Blog' },
-    { href: '/contributors', label: 'Contributors' },
+    { href: '/', label: 'Contributors' },
   ]
 
   const handleContributorsHover = usePrefetchOnHover()
@@ -122,24 +122,14 @@ const NavLinks = ({
         (mobile ? (
           <SheetClose asChild key='enterprise'>
             <motion.div variants={mobileNavItemVariants}>
-              <Link
-                href='https://form.typeform.com/to/jqCO12pF'
-                target='_blank'
-                rel='noopener noreferrer'
-                className={navItemClass}
-              >
+              <Link href='/' className={navItemClass}>
                 Enterprise
               </Link>
             </motion.div>
           </SheetClose>
         ) : (
           <motion.div variants={mobile ? mobileNavItemVariants : undefined} key='enterprise'>
-            <Link
-              href='https://form.typeform.com/to/jqCO12pF'
-              target='_blank'
-              rel='noopener noreferrer'
-              className={navItemClass}
-            >
+            <Link href='/' className={navItemClass}>
               Enterprise
             </Link>
           </motion.div>
@@ -228,11 +218,7 @@ export default function NavClient({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.4 }}
                 >
-                  <Link
-                    href='https://form.typeform.com/to/jqCO12pF'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
+                  <Link href='/'>
                     <Button className='h-[43px] bg-[#701ffc] px-6 py-2 font-geist-sans font-medium text-base text-neutral-100 transition-colors duration-200 hover:bg-[#802FFF]'>
                       Contact
                     </Button>
@@ -294,11 +280,7 @@ export default function NavClient({
                           )}
                           <motion.div variants={mobileButtonVariants} className='mt-auto pt-6'>
                             <SheetClose asChild>
-                              <Link
-                                href='https://form.typeform.com/to/jqCO12pF'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                              >
+                              <Link href='/' target='_blank'>
                                 <Button className='w-full bg-[#701ffc] py-6 font-medium text-base text-white shadow-[#701ffc]/20 shadow-lg transition-colors duration-200 hover:bg-[#802FFF]'>
                                   Contact
                                 </Button>

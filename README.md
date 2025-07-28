@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="apps/workflow/public/static/workflow.png" alt="workflow Studio Logo" width="500"/>
+  <img src="apps/workflow/public/static/workflow.png" alt="workflow Logo" width="500"/>
 </p>
 
 <p align="center">
   <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache-2.0"></a>
-  <a href="https://discord.gg/Hr4UWYEcTT"><img src="https://img.shields.io/badge/Discord-Join%20Server-7289DA?logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://discord.gg/ewQSvRbw"><img src="https://img.shields.io/badge/Discord-Join%20Server-7289DA?logo=discord&logoColor=white" alt="Discord"></a>
   <a href="https://x.com/workflowsai"><img src="https://img.shields.io/twitter/follow/workflowsai?style=social" alt="Twitter"></a>
   <a href="https://github.com/workflowsai/workflow/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome"></a>
   <a href="https://docs.workflows.ai"><img src="https://img.shields.io/badge/Docs-visit%20documentation-blue.svg" alt="Documentation"></a>
 </p>
 
 <p align="center">
-  <strong>workflow Studio</strong> is a lightweight, user-friendly platform for building AI agent workflows.
+  <strong>workflow</strong> is a lightweight, user-friendly platform for building AI agent workflows.
 </p>
 
 ## Getting Started
@@ -23,7 +23,7 @@
 
 ### Option 1: NPM Package (workflowplest)
 
-The easiest way to run workflow Studio locally is using our [NPM package](https://www.npmjs.com/package/workflows?activeTab=readme):
+The easiest way to run workflow locally is using our [NPM package](https://www.npmjs.com/package/workflows?activeTab=readme):
 
 ```bash
 npx workflows
@@ -33,7 +33,7 @@ After running these commands, open [http://localhost:3000/](http://localhost:300
 
 #### Options
 
-- `-p, --port <port>`: Specify the port to run workflow Studio on (default: 3000)
+- `-p, --port <port>`: Specify the port to run workflow on (default: 3000)
 - `--no-pull`: Skip pulling the latest Docker images
 
 #### Requirements
@@ -49,7 +49,7 @@ git clone https://github.com/saifuldevs/workflow.git
 # Navigate to the project directory
 cd workflow
 
-# Start workflow Studio
+# Start workflow
 docker compose -f docker-compose.prod.yml up -d
 ```
 
@@ -57,7 +57,7 @@ Access the application at [http://localhost:3000/](http://localhost:3000/)
 
 #### Using Local Models
 
-To use local models with workflow Studio:
+To use local models with workflow:
 
 1. Pull models using our helper script:
 
@@ -65,7 +65,7 @@ To use local models with workflow Studio:
 ./apps/workflow/scripts/ollama_docker.sh pull <model_name>
 ```
 
-2. Start workflow Studio with local model support:
+2. Start workflow with local model support:
 
 ```bash
 # With NVIDIA GPU support
@@ -92,7 +92,7 @@ docker compose -f docker-compose.prod.yml up -d
 - [Bun](https://bun.sh/) runtime
 - PostgreSQL 12+ with [pgvector extension](https://github.com/pgvector/pgvector) (required for AI embeddings)
 
-**Note:** workflow Studio uses vector embeddings for AI features like knowledge bases and semantic search, which requires the `pgvector` PostgreSQL extension.
+**Note:** workflow uses vector embeddings for AI features like knowledge bases and semantic search, which requires the `pgvector` PostgreSQL extension.
 
 1. Clone and install dependencies:
 
@@ -188,4 +188,4 @@ We welcome contributions! Please see our [Contributing Guide](.github/CONTRIBUTI
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-<p align="center">Made with ❤️ by the workflow Studio Team</p>
+<p align="center">Made with ❤️ by the workflow Team</p>
